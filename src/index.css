@@ -29,3 +29,69 @@
   font-weight: 400;
   src: url("./fonts/open-sans-v40-latin-regular.woff2") format("woff2");
 }
+
+:root {
+  /* Neutral Colors */
+  --neutral-900: #12131a;
+  --neutral-800: #21222c;
+  --neutral-700: #2a2837;
+  --neutral-600: #404254;
+  --neutral-500: #e4e4ef;
+  --neutral-400: #f2f2f7;
+  --neutral-0: #ffffff;
+
+  /* Purple Colors */
+  --blue-400: #d3a0fa;
+  --blue-500: #c27cf8;
+
+  /* Yellow Colors */
+  --yellow-500: #ff9f00;
+
+  /* Orange Colors */
+  --orange-500: #fe8159;
+  --orange-800: #fe8159;
+
+  /* Typography */
+  --text-preset-1-font-size: 6.4rem; /* 64px / 10px = 6.4rem */
+  --text-preset-1-line-height: 1; /* 100% as a relative unit */
+  --text-preset-1-letter-spacing: -0.1rem; /* -1px / 10px = -0.1rem */
+
+  --text-preset-1-mobile-font-size: 4rem; /* 40px / 10px = 4rem */
+  --text-preset-1-mobile-line-height: 1; /* 100% as a relative unit */
+  --text-preset-1-mobile-letter-spacing: -0.1rem; /* -1px / 10px = -0.1rem */
+
+  --text-preset-2-font-size: 2.4rem; /* 24px / 10px = 2.4rem */
+  --text-preset-2-line-height: 1.3; /* 130% as a relative unit */
+  --text-preset-2-letter-spacing: -0.1rem; /* -1px / 10px = -0.1rem */
+
+  --text-preset-3-font-size: 2rem; /* 20px / 10px = 2rem */
+  --text-preset-3-line-height: 1.3; /* 130% as a relative unit */
+  --text-preset-3-letter-spacing: -0.06rem; /* -0.6px / 10px = -0.06rem */
+
+  --text-preset-4-font-size: 1.6rem; /* 16px / 10px = 1.6rem */
+  --text-preset-4-line-height: 1.3; /* 130% as a relative unit */
+  --text-preset-4-letter-spacing: -0.06rem; /* -0.6px / 10px = -0.06rem */
+
+  /* Font Family */
+  --font-family: "DM Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--text-preset-3-line-height);
+  font-size: var(--text-preset-3-font-size);
+  height: 100%;
+}
