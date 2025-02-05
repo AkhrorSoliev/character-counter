@@ -74,6 +74,12 @@
 
   /* Font Family */
   --font-family: "DM Sans", sans-serif;
+
+  --bg-white-theme: url("./bg-light-theme.png");
+  --bg-dark-theme: url("./bg-dark-theme.png");
+
+  --logo-dark-theme: url("./logo-dark-theme.svg");
+  --logo-light-theme: url("./logo-light-theme.svg");
 }
 
 *,
@@ -93,5 +99,25 @@ body {
   font-family: var(--font-family);
   line-height: var(--text-preset-3-line-height);
   font-size: var(--text-preset-3-font-size);
+  background-image: var(--bg-white-theme);
   height: 100%;
+}
+
+img {
+  display: flex;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
