@@ -1,0 +1,14 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3.4rem;
+  padding-bottom: 3.4rem;
+  margin-bottom: 2.6rem;
+}
+
+.header__theme__toggler {
+  background-color: var(--neutral-400);
+  padding: 1.1rem;
+  border-radius: 0.8rem;
+}
