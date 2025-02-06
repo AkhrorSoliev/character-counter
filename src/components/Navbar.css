@@ -12,3 +12,28 @@
   padding: 1.1rem;
   border-radius: 0.8rem;
 }
+
+@media screen and (max-width: 768px) {
+  .header__container {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    margin-bottom: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header__container {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .header__logo img {
+    width: 187.4px;
+    height: 30px;
+  }
+
+  .header__theme__toggler {
+    padding: 0.6rem;
+  }
+}

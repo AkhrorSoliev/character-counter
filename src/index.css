@@ -113,6 +113,19 @@ button {
   cursor: pointer;
 }
 
+.main-title {
+  font-size: var(--text-preset-1-font-size);
+  line-height: var(--text-preset-1-line-height);
+  text-align: center;
+  width: 100%;
+  max-width: 513px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -1px;
+  color: var(--neutral-900);
+  margin-bottom: 4.8rem;
+}
+
 .container {
   width: 100%;
   max-width: 990px;
@@ -120,4 +133,22 @@ button {
   margin-right: auto;
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .main-title {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main-title {
+    font-size: var(--text-preset-1-mobile-font-size);
+    line-height: var(--text-preset-1-mobile-line-height);
+  }
 }
