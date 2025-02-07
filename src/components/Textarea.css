@@ -1,0 +1,11 @@
+.textarea .container {
+  padding: 2rem;
+  font-family: inherit;
+  font-size: var(--text-preset-3-font-size);
+  line-height: var(--text-preset-3-line-height);
+  color: var(--neutral-900);
+  letter-spacing: -0.6px;
+  background-color: var(--neutral-500);
+  border-radius: 12px;
+  border: 1rem solid var(--);
+}
