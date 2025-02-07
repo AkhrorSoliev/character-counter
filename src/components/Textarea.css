@@ -1,11 +1,76 @@
-.textarea .container {
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.textarea__container {
   padding: 2rem;
+  padding-bottom: 0;
   font-family: inherit;
   font-size: var(--text-preset-3-font-size);
   line-height: var(--text-preset-3-line-height);
   color: var(--neutral-900);
   letter-spacing: -0.6px;
-  background-color: var(--neutral-500);
+  background-color: var(--neutral-400);
   border-radius: 12px;
-  border: 1rem solid var(--);
+  border: 2px solid var(--neutral-500);
+  min-height: 200px;
+  resize: vertical;
+}
+
+.textarea__container:focus {
+  outline: none;
+}
+
+.options {
+  display: flex;
+  font-size: var(--text-preset-4-font-size);
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+.options__label {
+  margin-right: 2.4rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.options__label:nth-child(2) {
+  margin-right: auto;
+}
+
+.options__input {
+  appearance: none;
+  margin-right: 1rem;
+}
+
+.options__input::before {
+  display: inline-block;
+  content: "";
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--neutral-900);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.options__input:checked::before {
+  background-color: var(--blue-400);
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  border-color: transparent;
+}
+
+@media screen and (max-width: 375px) {
+  .textarea__container.container {
+    padding: 1.2rem;
+    padding-bottom: 0;
+  }
 }
