@@ -3,15 +3,18 @@ import "./Textarea.css";
 
 function Textarea() {
   const [limitCharacter, setLimitCharacter] = useState(false);
+  const [error, setError] = useState(false);
   return (
     <section className=" textarea-wrapper container">
       <textarea className="textarea__container"></textarea>
-      <p className="textarea__error">
-        <i className="fa-solid fa-circle-info textarea__error__icon"></i>
-        <span className="textarea__error__text">
-          Limit reached! Your text exceeds 300 characters.
-        </span>
-      </p>
+      {error && (
+        <p className="textarea__error">
+          <i className="fa-solid fa-circle-info textarea__error__icon"></i>
+          <span className="textarea__error__text">
+            Limit reached! Your text exceeds 300 characters.
+          </span>
+        </p>
+      )}
       <div className="options">
         <label className="options__label">
           <input className="options__input" type="checkbox" />
