@@ -28,6 +28,23 @@ body.dark-mode .textarea__container {
   outline: none;
 }
 
+.textarea__error {
+  color: var(--orange-800);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.textarea__error__icon {
+  font-size: 1.4rem;
+}
+
+.textarea__error__text {
+  font-size: var(--text-preset-4-font-size);
+  line-height: var(--text-preset-4-line-height);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+}
+
 .options {
   display: flex;
   font-size: var(--text-preset-4-font-size);
