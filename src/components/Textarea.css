@@ -90,9 +90,37 @@ body.dark-mode .textarea__container {
   border-color: transparent;
 }
 
+.options__input[type="number"] {
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.6rem;
+  font-size: var(--text-preset-4-font-size);
+  line-height: var(--text-preset-4-line-height);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  border: 1px solid var(--neutral-600);
+  color: var(--neutral-900);
+  font-family: inherit;
+  background-color: transparent;
+  appearance: none;
+  width: 55px;
+  margin-left: 1rem;
+}
+
+.options__input:focus {
+  outline: none;
+}
+
+body.dark-mode .options__input {
+  color: #ffffff;
+}
+
 .error-textarea {
   box-shadow: 0px 0px 8px #da3701;
   border-color: #da3701;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 768px) {
