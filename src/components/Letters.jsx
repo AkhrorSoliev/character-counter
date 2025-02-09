@@ -8,27 +8,37 @@ function Letters() {
         <ul className="letters__list">
           <li className="letters__list__item">
             <p className="letters__list__letter">e</p>
-            <div className="letters__list__percentage"></div>
+            <div className="letters__list__percentage">
+              <div className="letters__list__percentage__proccess"></div>
+            </div>
             <p className="letters__list__stat">40 (16.06%)</p>
           </li>
           <li className="letters__list__item">
             <p className="letters__list__letter">e</p>
-            <div className="letters__list__percentage"></div>
+            <div className="letters__list__percentage">
+              <div className="letters__list__percentage__proccess"></div>
+            </div>
             <p className="letters__list__stat">40 (16.06%)</p>
           </li>
           <li className="letters__list__item">
             <p className="letters__list__letter">e</p>
-            <div className="letters__list__percentage"></div>
+            <div className="letters__list__percentage">
+              <div className="letters__list__percentage__proccess"></div>
+            </div>
             <p className="letters__list__stat">40 (16.06%)</p>
           </li>
           <li className="letters__list__item">
             <p className="letters__list__letter">e</p>
-            <div className="letters__list__percentage"></div>
+            <div className="letters__list__percentage">
+              <div className="letters__list__percentage__proccess"></div>
+            </div>
             <p className="letters__list__stat">40 (16.06%)</p>
           </li>
           <li className="letters__list__item">
             <p className="letters__list__letter">e</p>
-            <div className="letters__list__percentage"></div>
+            <div className="letters__list__percentage">
+              <div className="letters__list__percentage__proccess"></div>
+            </div>
             <p className="letters__list__stat">40 (16.06%)</p>
           </li>
         </ul>

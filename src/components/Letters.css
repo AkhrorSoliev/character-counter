@@ -1,4 +1,5 @@
 .letters {
+  padding-bottom: 6.4rem;
 }
 
 .letters__container {
@@ -9,4 +10,43 @@
   letter-spacing: var(--text-preset-2-letter-spacing);
   line-height: var(--text-preset-1-line-height);
   margin-bottom: 2rem;
+}
+
+.letters__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.letters__list__item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.letters__list__letter {
+  text-transform: uppercase;
+}
+
+.letters__list__percentage {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+}
+
+.letters__list__percentage__proccess {
+  height: inherit;
+  border-radius: inherit;
+  background-color: var(--blue-400);
+  width: 32%;
+}
+
+.letters__list__stat {
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .letters {
+    padding-bottom: 3.2rem;
+  }
 }
