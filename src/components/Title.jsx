@@ -1,4 +1,4 @@
-function Section({ title }) {
+function Title({ title }) {
   return (
     <>
       <h1 className="main-title">{title}</h1>
@@ -6,4 +6,4 @@ function Section({ title }) {
   );
 }
 
-export default Section;
+export default Title;
