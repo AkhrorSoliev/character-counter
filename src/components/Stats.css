@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-position: right -30px center;
   background-size: 150px 150px;
-  color: var(--neutral-900);
+  color: #12131a;
 }
 
 .stats__item:nth-child(1) {
