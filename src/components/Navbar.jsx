@@ -3,21 +3,21 @@ import { useTheme } from "../hooks/useTheme";
 
 function Navbar() {
   const { changeTheme, theme } = useTheme();
-  console.log(theme);
   return (
     <header className="header">
       <div className="container header__container">
         <a className="header__logo" href="/">
-          {theme == "dark-mode" ? (
+          {theme == "dark-mode" && (
             <img
-              src="./logo-light-theme.svg"
+              src="./logo-dark-theme.svg"
               alt=""
               width={245.53}
               height={40}
             />
-          ) : (
+          )}
+          {theme == "light-mode" && (
             <img
-              src="./logo-dark-theme.svg"
+              src="./logo-light-theme.svg"
               alt=""
               width={245.53}
               height={40}
