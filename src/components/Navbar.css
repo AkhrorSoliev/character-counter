@@ -13,6 +13,10 @@
   border-radius: 0.8rem;
 }
 
+body.dark-mode .header__theme__toggler {
+  background-color: #2a2b37;
+}
+
 @media screen and (max-width: 768px) {
   .header__container {
     padding-top: 1.8rem;
