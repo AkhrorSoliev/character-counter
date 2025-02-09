@@ -5,7 +5,7 @@ function Textarea() {
     <section className=" textarea-wrapper container">
       <textarea className="textarea__container"></textarea>
       <p className="textarea__error">
-        <i class="fa-solid fa-circle-info textarea__error__icon"></i>
+        <i className="fa-solid fa-circle-info textarea__error__icon"></i>
         <span className="textarea__error__text">
           Limit reached! Your text exceeds 300 characters.
         </span>
