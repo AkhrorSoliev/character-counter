@@ -3,16 +3,23 @@ import Title from "./components/Title";
 import Stats from "./components/Stats";
 import Textarea from "./components/Textarea";
 import Letters from "./components/Letters";
+import { useState } from "react";
 
 function App() {
+  const [text, setText] = useState("");
+  const [excludeSpaces, setExcludeSpaces] = useState(false);
   return (
     <>
       <Navbar />
       <main>
         <Title title="Analyze your text in real-time." />
-        <Textarea />
+        <Textarea
+          setText={setText}
+          setExcludeSpaces={setExcludeSpaces}
+          excludeSpaces={excludeSpaces}
+        />
         <Stats />
-        <Letters />
+        <Letters text={text} excludeSpaces={excludeSpaces} />
       </main>
     </>
   );
