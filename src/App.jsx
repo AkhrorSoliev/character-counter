@@ -18,7 +18,7 @@ function App() {
           setExcludeSpaces={setExcludeSpaces}
           excludeSpaces={excludeSpaces}
         />
-        <Stats />
+        <Stats text={text} />
         <Letters text={text} excludeSpaces={excludeSpaces} />
       </main>
     </>

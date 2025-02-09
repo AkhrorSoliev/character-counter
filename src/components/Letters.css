@@ -12,6 +12,13 @@
   margin-bottom: 2rem;
 }
 
+.letters__subtitle {
+  font-size: var(--text-preset-4-font-size);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  line-height: var(--text-preset-1-line-height);
+  font-weight: 400;
+}
+
 .letters__list {
   display: flex;
   flex-direction: column;
