@@ -87,11 +87,11 @@ input[type="number"] {
   /* Font Family */
   --font-family: "DM Sans", sans-serif;
 
-  --bg-white-theme: url("./bg-light-theme.png");
-  --bg-dark-theme: url("./bg-dark-theme.png");
+  --bg-white-theme: url("../bg-light-theme.png");
+  --bg-dark-theme: url("../bg-dark-theme.png");
 
-  --logo-dark-theme: url("./logo-dark-theme.svg");
-  --logo-light-theme: url("./logo-light-theme.svg");
+  --logo-dark-theme: url("../logo-dark-theme.svg");
+  --logo-light-theme: url("../logo-light-theme.svg");
 }
 
 body.dark-mode {
