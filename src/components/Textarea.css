@@ -11,13 +11,17 @@
   font-family: inherit;
   font-size: var(--text-preset-3-font-size);
   line-height: var(--text-preset-3-line-height);
-  color: var(--neutral-900);
   letter-spacing: -0.6px;
   background-color: var(--neutral-400);
   border-radius: 12px;
   border: 1px solid var(--neutral-500);
   min-height: 200px;
   resize: vertical;
+  color: inherit;
+}
+
+body.dark-mode .textarea__container {
+  background-color: #2a2b37;
 }
 
 .textarea__container:focus {
