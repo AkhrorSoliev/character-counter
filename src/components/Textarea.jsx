@@ -1,12 +1,16 @@
 import { useState } from "react";
 import "./Textarea.css";
 
-function Textarea() {
+function Textarea({ setText, setExcludeSpaces, excludeSpaces }) {
   const [limitCharacter, setLimitCharacter] = useState(false);
   const [error, setError] = useState(false);
+
   return (
     <section className=" textarea-wrapper container">
-      <textarea className="textarea__container"></textarea>
+      <textarea
+        onChange={(e) => setText(e.target.value)}
+        className="textarea__container"
+      ></textarea>
       {error && (
         <p className="textarea__error">
           <i className="fa-solid fa-circle-info textarea__error__icon"></i>
@@ -17,7 +21,12 @@ function Textarea() {
       )}
       <div className="options">
         <label className="options__label">
-          <input className="options__input" type="checkbox" />
+          <input
+            className="options__input"
+            type="checkbox"
+            defaultChecked={excludeSpaces}
+            onChange={() => setExcludeSpaces(!excludeSpaces)}
+          />
           <span className="options__text">Exclude Spaces</span>
         </label>
         <label className="options__label">
