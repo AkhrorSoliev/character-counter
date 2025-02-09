@@ -2,7 +2,7 @@ import "./Textarea.css";
 
 function Textarea() {
   return (
-    <div className=" textarea-wrapper container">
+    <section className=" textarea-wrapper container">
       <textarea className="textarea__container"></textarea>
       <div className="options">
         <label className="options__label">
@@ -15,7 +15,7 @@ function Textarea() {
         </label>
         <p className="approx-time">Approx. reading time: 1 minute</p>
       </div>
-    </div>
+    </section>
   );
 }
 

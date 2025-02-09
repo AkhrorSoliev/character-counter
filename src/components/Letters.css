@@ -1,0 +1,12 @@
+.letters {
+}
+
+.letters__container {
+}
+
+.letters__title {
+  font-size: var(--text-preset-2-font-size);
+  letter-spacing: var(--text-preset-2-letter-spacing);
+  line-height: var(--text-preset-1-line-height);
+  margin-bottom: 2rem;
+}
