@@ -41,6 +41,20 @@ function Letters({ text, excludeSpaces }) {
 
     setLettersAmount(lettersAmount);
   }, [text, excludeSpaces]);
+
+  if (text.length === 0) {
+    return (
+      <section className="letters">
+        <div className="letters__container container">
+          <h3 className="letters__title">Letter Density</h3>
+          <h4 className="letters__subtitle">
+            No characters found. Start typing to see letter density.
+          </h4>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="letters">
       <div className="letters__container container">
