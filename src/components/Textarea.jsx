@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "./Textarea.css";
 
 function Textarea() {
+  const [limitCharacter, setLimitCharacter] = useState(false);
   return (
     <section className=" textarea-wrapper container">
       <textarea className="textarea__container"></textarea>
@@ -16,9 +18,18 @@ function Textarea() {
           <span className="options__text">Exclude Spaces</span>
         </label>
         <label className="options__label">
-          <input className="options__input" type="checkbox" />
+          <input
+            onClick={() => setLimitCharacter(!limitCharacter)}
+            className="options__input"
+            type="checkbox"
+          />
           <span className="options__text">Set Character Limit</span>
+          <input
+            className={`options__input ${limitCharacter ? "" : "hidden"}`}
+            type="number"
+          />
         </label>
+
         <p className="approx-time">Approx. reading time: 1 minute</p>
       </div>
     </section>
