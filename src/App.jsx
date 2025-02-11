@@ -8,6 +8,7 @@ import { useState } from "react";
 function App() {
   const [text, setText] = useState("");
   const [excludeSpaces, setExcludeSpaces] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -17,6 +18,7 @@ function App() {
           setText={setText}
           setExcludeSpaces={setExcludeSpaces}
           excludeSpaces={excludeSpaces}
+          text={text}
         />
         <Stats text={text} />
         <Letters text={text} excludeSpaces={excludeSpaces} />

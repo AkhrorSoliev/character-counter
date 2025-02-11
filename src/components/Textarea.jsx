@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Textarea.css";
 
-function Textarea({ setText, setExcludeSpaces, excludeSpaces }) {
+function Textarea({ setText, setExcludeSpaces, excludeSpaces, text }) {
   const [limitCharacter, setLimitCharacter] = useState(false);
   const [error, setError] = useState(false);
+  const [readingTime, setReadingTime] = useState(0);
+
+  useEffect(() => {
+    const words = text.trim().split(/\s+/).length;
+    const averageWPM = 200;
+    const estimatedTime = words / averageWPM;
+    setReadingTime(Math.round(estimatedTime));
+  }, [text]);
 
   return (
     <section className=" textarea-wrapper container">
@@ -42,7 +50,9 @@ function Textarea({ setText, setExcludeSpaces, excludeSpaces }) {
           />
         </label>
 
-        <p className="approx-time">Approx. reading time: 1 minute</p>
+        <p className="approx-time">
+          Approx. reading time: {readingTime} minute
+        </p>
       </div>
     </section>
   );
