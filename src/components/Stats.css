@@ -19,17 +19,17 @@
 
 .stats__item:nth-child(1) {
   background-color: var(--blue-400);
-  background-image: url("./pattern-character-count.svg");
+  background-image: url("../pattern-character-count.svg");
 }
 
 .stats__item:nth-child(2) {
   background-color: var(--yellow-500);
-  background-image: url("./pattern-word-count.svg");
+  background-image: url("../pattern-word-count.svg");
 }
 
 .stats__item:nth-child(3) {
   background-color: var(--orange-500);
-  background-image: url("./pattern-sentence-count.svg");
+  background-image: url("../pattern-sentence-count.svg");
 }
 
 .stats__number {
