@@ -5,6 +5,7 @@ function Textarea({ setText, setExcludeSpaces, excludeSpaces, text }) {
   const [limitCharacter, setLimitCharacter] = useState(false);
   const [error, setError] = useState(false);
   const [readingTime, setReadingTime] = useState(0);
+  const [limitWords, setLimitWords] = useState(300);
 
   useEffect(() => {
     const words = text.trim().split(/\s+/).length;
@@ -13,17 +14,31 @@ function Textarea({ setText, setExcludeSpaces, excludeSpaces, text }) {
     setReadingTime(Math.round(estimatedTime));
   }, [text]);
 
+  useEffect(() => {
+    if (!limitCharacter) {
+      setError(false);
+    }
+  }, [limitCharacter]);
+
   return (
-    <section className=" textarea-wrapper container">
+    <section className="textarea-wrapper container">
       <textarea
-        onChange={(e) => setText(e.target.value)}
-        className="textarea__container"
+        onChange={(e) => {
+          if (limitCharacter && e.target.value.length >= limitWords) {
+            setError(true);
+          } else {
+            setError(false);
+            setText(e.target.value);
+          }
+        }}
+        className={`textarea__container ${error ? "error-textarea" : ""}`}
+        maxLength={limitCharacter ? limitWords : undefined}
       ></textarea>
-      {error && (
+      {error && limitCharacter && (
         <p className="textarea__error">
           <i className="fa-solid fa-circle-info textarea__error__icon"></i>
           <span className="textarea__error__text">
-            Limit reached! Your text exceeds 300 characters.
+            Limit reached! Your text exceeds {limitWords} characters.
           </span>
         </p>
       )}
@@ -32,7 +47,7 @@ function Textarea({ setText, setExcludeSpaces, excludeSpaces, text }) {
           <input
             className="options__input"
             type="checkbox"
-            defaultChecked={excludeSpaces}
+            checked={excludeSpaces}
             onChange={() => setExcludeSpaces(!excludeSpaces)}
           />
           <span className="options__text">Exclude Spaces</span>
@@ -44,12 +59,23 @@ function Textarea({ setText, setExcludeSpaces, excludeSpaces, text }) {
             type="checkbox"
           />
           <span className="options__text">Set Character Limit</span>
-          <input
-            className={`options__input ${limitCharacter ? "" : "hidden"}`}
-            type="number"
-          />
+          {limitCharacter && (
+            <input
+              className="options__input"
+              type="number"
+              value={limitWords}
+              onChange={(e) => {
+                const value = e.target.value;
+                if (
+                  value === "" ||
+                  (Number(value) > 0 && Number.isInteger(Number(value)))
+                ) {
+                  setLimitWords(value === "" ? "" : Number(value));
+                }
+              }}
+            />
+          )}
         </label>
-
         <p className="approx-time">
           Approx. reading time: {readingTime} minute
         </p>
