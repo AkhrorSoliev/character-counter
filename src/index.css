@@ -175,6 +175,10 @@ button {
 }
 
 @media screen and (max-width: 375px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .main-title {
     font-size: var(--text-preset-1-mobile-font-size);
     line-height: var(--text-preset-1-mobile-line-height);
